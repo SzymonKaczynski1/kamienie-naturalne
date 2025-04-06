@@ -16,10 +16,9 @@ body {
 /* Nawigacja */
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-    padding: 10px 40px;
+    padding: 10px; /* Zmniejszam padding boczny do minimum */
     position: fixed;
     width: 100%;
     top: 0;
@@ -28,16 +27,16 @@ body {
 }
 
 .logo {
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 700;
     color: #66d9a3;
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(90deg, #66d9a3, #00b359);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    margin-right: auto; /* Przykleja logo do lewej krawędzi */
 }
 
-/* Przycisk powrotu */
 .back-btn {
     display: flex;
     align-items: center;
@@ -52,6 +51,7 @@ body {
     text-decoration: none;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    margin-left: auto; /* Przykleja przycisk do prawej krawędzi */
 }
 
 .back-btn i {
@@ -109,7 +109,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
-    padding: 0 20px; /* Dodaję padding boczny, aby kontener nie dotykał krawędzi */
+    padding: 0 20px;
 }
 
 .regulamin-item {
@@ -299,11 +299,22 @@ body.dark .back-btn:hover {
 /* Responsywność */
 @media (max-width: 768px) {
     .navbar {
-        padding: 10px 20px;
+        padding: 10px; /* Minimalny padding na mobile */
+    }
+
+    .logo {
+        font-size: 18px; /* Zachowuję mniejszy rozmiar na telefonie */
+        margin-right: auto; /* Przykleja logo do lewej krawędzi */
+    }
+
+    .back-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+        margin-left: auto; /* Przykleja przycisk do prawej krawędzi */
     }
 
     .regulamin-section {
-        padding: 80px 10px; /* Zmniejszam padding boczny, aby lepiej dopasować do ekranu */
+        padding: 80px 10px;
     }
 
     .regulamin-header h1 {
@@ -312,29 +323,24 @@ body.dark .back-btn:hover {
 
     .regulamin-header .subtitle {
         font-size: 18px;
-        padding: 0 10px; /* Dodaję padding, aby tekst nie wychodził */
+        padding: 0 10px;
     }
 
     .regulamin-container {
-        grid-template-columns: 1fr; /* Jeden element na wiersz na telefonie */
-        gap: 20px; /* Zmniejszam odstępy między elementami */
-        padding: 0 10px; /* Zmniejszam padding boczny */
-        max-width: 100%; /* Zapewniam, że kontener nie przekracza szerokości ekranu */
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 10px;
+        max-width: 100%;
     }
 
     .regulamin-item {
         padding: 20px;
-        margin: 0; /* Usuwam marginesy, aby lepiej się mieściły */
-        width: 100%; /* Ustawiam pełną szerokość w ramach kontenera */
-    }
-
-    .back-btn {
-        padding: 8px 15px;
-        font-size: 14px;
+        margin: 0;
+        width: 100%;
     }
 
     .footer-content {
         flex-direction: column;
-        padding: 0 10px; /* Dodaję padding, aby stopka nie wychodziła */
+        padding: 0 10px;
     }
 }
