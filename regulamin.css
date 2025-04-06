@@ -18,7 +18,7 @@ body {
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
-    padding: 10px; /* Zmniejszam padding boczny do minimum */
+    padding: 10px; /* Minimalny padding boczny */
     position: fixed;
     width: 100%;
     top: 0;
@@ -34,7 +34,8 @@ body {
     background: linear-gradient(90deg, #66d9a3, #00b359);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-right: auto; /* Przykleja logo do lewej krawędzi */
+    margin-left: auto; /* Przykleja logo do prawej krawędzi */
+    order: 2; /* Zmiana kolejności wizualnej – logo na końcu */
 }
 
 .back-btn {
@@ -51,7 +52,8 @@ body {
     text-decoration: none;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    margin-left: auto; /* Przykleja przycisk do prawej krawędzi */
+    margin-right: auto; /* Przykleja przycisk do lewej krawędzi */
+    order: 1; /* Zmiana kolejności wizualnej – przycisk na początku */
 }
 
 .back-btn i {
@@ -299,18 +301,20 @@ body.dark .back-btn:hover {
 /* Responsywność */
 @media (max-width: 768px) {
     .navbar {
-        padding: 10px; /* Minimalny padding na mobile */
+        padding: 10px;
     }
 
     .logo {
-        font-size: 18px; /* Zachowuję mniejszy rozmiar na telefonie */
-        margin-right: auto; /* Przykleja logo do lewej krawędzi */
+        font-size: 18px;
+        margin-left: auto; /* Przykleja logo do prawej krawędzi na mobile */
+        order: 2; /* Logo na końcu */
     }
 
     .back-btn {
         padding: 8px 15px;
         font-size: 14px;
-        margin-left: auto; /* Przykleja przycisk do prawej krawędzi */
+        margin-right: auto; /* Przykleja przycisk do lewej krawędzi na mobile */
+        order: 1; /* Przycisk na początku */
     }
 
     .regulamin-section {

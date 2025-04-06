@@ -43,9 +43,9 @@
     <header id="home" class="banner" style="background-image: url('insp1.jpg');">
         <div class="parallax-layer"></div>
         <div class="banner-content">
-            <h1>Twoja przestrzeń, nasza pasja</h1>
-            <p>Odkryj piękno kamienia naturalnego w nowoczesnym stylu</p>
-            <button class="contact-btn" onclick="document.querySelector('#oferta').scrollIntoView({ behavior: 'smooth' })">Poznaj ofertę</button>
+            <h1>Piękno natury zaklęte w kamieniu</h1>
+            <p>Twórz wyjątkowe przestrzenie z kamieni naturalnych</p>
+            <button class="contact-btn">Poznaj ofertę</button>
             <a href="tel:500341568" class="call-btn"><i class="fas fa-phone"></i>Zadzwoń</a>
         </div>
     </header>
@@ -62,7 +62,7 @@
             <div class="about-item">
                 <i class="fas fa-tools fa-2x"></i>
                 <h3>Doświadczenie</h3>
-                <p>Ponad 10 lat na rynku i setki zrealizowanych projektów – znamy się na rzeczy!</p>
+                <p>Ponad 5 lat na rynku i setki zrealizowanych projektów – znamy się na rzeczy!</p>
             </div>
             <div class="about-item">
                 <i class="fas fa-smile fa-2x"></i>
@@ -207,26 +207,26 @@
         </div>
     </section>
 
-    <!-- Sekcja Kontakt -->
-    <section id="kontakt" class="section">
-        <h2>Złóż zamówienie już teraz</h2>
-        <div class="contact-container">
-            <div class="contact-form">
-                <form>
-                    <input type="text" placeholder="Imię i nazwisko" required>
-                    <input type="email" placeholder="E-mail" required>
-                    <textarea placeholder="Twoja wiadomość" rows="5" required></textarea>
-                    <button type="submit" class="form-btn">Wyślij</button>
-                </form>
-            </div>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2447.797073844566!2d22.279641315797!3d52.09759397973629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471f3e7e8b8e5b7b%3A0x8e8f8c8e8e8f8c8e!2sUjrzan%C3%B3w%20257B%2C%2008-110%20Siedlce%2C%20Poland!5e0!3m2!1sen!2sus!4v1698765432100!5m2!1sen!2sus" width="100%" height="300" frameborder="0"></iframe>
-                <div class="map-info">
-                    <p><i class="fas fa-map-marker-alt"></i> Ujrzanów 257B, 08-110 Siedlce</p>
-                </div>
+<!-- Sekcja Kontakt -->
+<section id="kontakt" class="section">
+    <h2>Złóż zamówienie już teraz</h2>
+    <div class="contact-container">
+        <div class="contact-form">
+            <form action="send_email.php" method="POST">
+                <input type="text" name="name" placeholder="Imię i nazwisko" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <textarea name="message" placeholder="Twoja wiadomość" rows="5" required></textarea>
+                <button type="submit" class="form-btn">Wyślij</button>
+            </form>
+        </div>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2447.797073844566!2d22.279641315797!3d52.09759397973629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471f3e7e8b8e5b7b%3A0x8e8f8c8e8e8f8c8e!2sUjrzan%C3%B3w%20257B%2C%2008-110%20Siedlce%2C%20Poland!5e0!3m2!1sen!2sus!4v1698765432100!5m2!1sen!2sus" width="100%" height="300" frameborder="0"></iframe>
+            <div class="map-info">
+                <p><i class="fas fa-map-marker-alt"></i> Ujrzanów 257B, 08-110 Siedlce</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Stopka -->
     <footer class="footer">
