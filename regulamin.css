@@ -109,6 +109,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
+    padding: 0 20px; /* Dodaję padding boczny, aby kontener nie dotykał krawędzi */
 }
 
 .regulamin-item {
@@ -301,20 +302,39 @@ body.dark .back-btn:hover {
         padding: 10px 20px;
     }
 
+    .regulamin-section {
+        padding: 80px 10px; /* Zmniejszam padding boczny, aby lepiej dopasować do ekranu */
+    }
+
     .regulamin-header h1 {
         font-size: 40px;
     }
 
     .regulamin-header .subtitle {
         font-size: 18px;
+        padding: 0 10px; /* Dodaję padding, aby tekst nie wychodził */
+    }
+
+    .regulamin-container {
+        grid-template-columns: 1fr; /* Jeden element na wiersz na telefonie */
+        gap: 20px; /* Zmniejszam odstępy między elementami */
+        padding: 0 10px; /* Zmniejszam padding boczny */
+        max-width: 100%; /* Zapewniam, że kontener nie przekracza szerokości ekranu */
     }
 
     .regulamin-item {
         padding: 20px;
+        margin: 0; /* Usuwam marginesy, aby lepiej się mieściły */
+        width: 100%; /* Ustawiam pełną szerokość w ramach kontenera */
     }
 
     .back-btn {
         padding: 8px 15px;
         font-size: 14px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        padding: 0 10px; /* Dodaję padding, aby stopka nie wychodziła */
     }
 }

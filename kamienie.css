@@ -1106,25 +1106,26 @@ body.dark-mode .product-item p {
 /* Responsywność */
 @media (max-width: 768px) {
     .navbar {
-        padding: 10px; /* Wyrównuję paddingi na wszystkich stronach */
+        padding: 10px;
         flex-wrap: wrap;
-        position: absolute;
+        position: fixed; /* Zmieniam na fixed, aby menu było zawsze na górze */
         top: 0;
         z-index: 100;
         background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+        box-shadow: none;
+        margin-bottom: 0; /* Usuwam ewentualny margines dolny */
     }
 
     .menu {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 50px;
+        top: 100%;
         left: 0;
         width: 100%;
         background: linear-gradient(135deg, #66d9a3, #00b359);
         padding: 20px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        order: 2;
+        margin-top: 0;
     }
 
     .menu.active {
@@ -1146,14 +1147,14 @@ body.dark-mode .product-item p {
     .hamburger {
         display: flex;
         order: 4;
-        margin-left: 5px; /* Delikatny odstęp od przycisku trybu ciemnego */
+        margin-left: 5px;
     }
 
     .dark-mode-btn {
         order: 3;
         width: 32px;
         height: 32px;
-        margin-right: 0; /* Usuwam poprzedni margines, aby odstęp był tylko z lewej strony */
+        margin-right: 0;
     }
 
     .dark-mode-btn i {
@@ -1167,7 +1168,14 @@ body.dark-mode .product-item p {
         margin-right: auto;
     }
 
-    /* Przyciski "Poznaj ofertę" i "Zadzwoń" */
+    /* Baner – zdjęcie bez paska */
+    .banner {
+        margin-top: 0; /* Usuwam margines górny */
+        padding-top: 60px; /* Dodaję padding, aby uwzględnić wysokość navbaru */
+        height: 65vh;
+    }
+
+    /* Przyciski "Poznaj ofertę" i "Zadzwoń" – identyczna wysokość */
     .banner-content {
         display: flex;
         flex-direction: column;
@@ -1175,18 +1183,19 @@ body.dark-mode .product-item p {
     }
 
     .contact-btn {
-        display: flex; /* Dopasowuję do stylu "Zadzwoń" */
+        display: flex;
         width: 140px;
         padding: 10px 20px;
         margin: 5px;
         font-size: 16px;
         align-items: center;
         justify-content: center;
-        position: relative; /* Dla ikony strzałki */
+        position: relative;
+        height: 40px;
     }
 
     .contact-btn::before {
-        content: '\f061'; /* Ikona strzałki w prawo z Font Awesome */
+        content: '\f061';
         font-family: 'Font Awesome 5 Free';
         font-weight: 900;
         color: #fff;
@@ -1199,7 +1208,9 @@ body.dark-mode .product-item p {
         padding: 10px 20px;
         margin: 5px;
         font-size: 16px;
-        height: auto;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
     }
 
     .banner-content h1 {
