@@ -566,7 +566,7 @@ body.dark-mode .offer-item {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, -BG-0.2);
     transform: skewX(-20deg);
     transition: left 0.4s ease;
 }
@@ -1108,6 +1108,10 @@ body.dark-mode .product-item p {
     .navbar {
         padding: 10px 20px;
         flex-wrap: wrap;
+        position: absolute; /* Ustawiam navbar nad banerem */
+        top: 0;
+        z-index: 100;
+        background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); /* Zachowuję tło */
     }
 
     .menu {
@@ -1155,6 +1159,29 @@ body.dark-mode .product-item p {
         font-size: 16px;
     }
 
+    /* Zmiana logo i jego pozycji */
+    .logo {
+        font-size: 20px; /* Zmniejszam logo, aby się zmieściło */
+        order: 1;
+        margin-right: auto; /* Przesuwam na lewo */
+    }
+
+    /* Przyciski "Poznaj ofertę" i "Zadzwoń" w jednej linii */
+    .banner-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-btn,
+    .call-btn {
+        display: inline-flex;
+        width: 140px; /* Zmniejszam szerokość, aby zmieściły się obok siebie */
+        padding: 10px 20px;
+        margin: 5px; /* Dodaję odstęp między przyciskami */
+        font-size: 16px;
+    }
+
     .banner-content h1 {
         font-size: 36px;
     }
@@ -1164,11 +1191,8 @@ body.dark-mode .product-item p {
     }
 
     .call-btn {
-        display: flex;
-        padding: 15px 35px;
-        width: 200px;
-        margin: 0 auto;
-        height: 53px;
+        display: flex; /* Pokazuję przycisk "Zadzwoń" na mobile */
+        height: auto; /* Usuwam stałą wysokość dla lepszej elastyczności */
     }
 
     .section h2 {
@@ -1192,9 +1216,21 @@ body.dark-mode .product-item p {
         order: 1;
     }
 
+    /* Stopka – przesunięcie kontaktu w lewo */
     .footer-content {
         justify-content: flex-start;
         text-align: left;
+        flex-direction: column; /* Ustawiam kolumnowy układ dla lepszej kontroli */
+    }
+
+    .footer-contact {
+        margin-left: 10px; /* Przesuwam bardziej w lewo */
+        order: 2; /* Kontakt na dole */
+    }
+
+    .footer-brand {
+        margin-left: 10px; /* Wyrównuję z "Kamienie Naturalne" */
+        order: 1; /* "Kamienie Naturalne" na górze */
     }
 
     .faq-item h3 {
