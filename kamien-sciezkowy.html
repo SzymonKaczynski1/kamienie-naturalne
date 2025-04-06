@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamień ścieżkowy - Kamienie Naturalne</title>
+    <link rel="stylesheet" href="kamienie.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Menu -->
+    <nav class="navbar">
+        <div class="logo">Kamienie Naturalne</div>
+        <ul class="menu">
+            <li><a href="kamienie.html#home">Strona główna</a></li>
+            <li><a href="kamienie.html#oferta">Oferta</a></li>
+            <li><a href="kamienie.html#onas">O nas</a></li>
+            <li><a href="kamienie.html#klienci">Klienci</a></li>
+            <li><a href="kamienie.html#kontakt">Kontakt</a></li>
+            <li><a href="regulamin.html">Regulamin</a></li>
+            <li><a href="kamienie.html#faq">FAQ</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <button class="dark-mode-btn">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+        </button>
+    </nav>
+
+    <!-- Sekcja produktów -->
+    <section class="section product-section">
+        <h2>Kamień ścieżkowy</h2>
+        <div class="product-container">
+            <!-- Stepy ogrodowe -->
+            <div class="product-item">
+                <h3>Stepy ogrodowe</h3>
+                <div class="product-images">
+                    <div class="image-wrapper"><img src="stepy1.jpg" alt="Stepy ogrodowe 1"></div>
+                    <div class="image-wrapper"><img src="stepy2.jpg" alt="Stepy ogrodowe 2"></div>
+                    <div class="image-wrapper"><img src="stepy3.jpg" alt="Stepy ogrodowe 3"></div>
+                </div>
+                <p>Wymiary: 40x40x4,5 cm<br>Produkt: Marmur<br>Kolor: biały z niebieskimi szarymi liniami</p>
+            </div>
+
+            <!-- Płyty deptakowe -->
+            <div class="product-item">
+                <h3>Płyty deptakowe</h3>
+                <div class="product-images">
+                    <div class="image-wrapper"><img src="plyty1.jpg" alt="Płyty deptakowe 1"></div>
+                    <div class="image-wrapper"><img src="plyty2.jpg" alt="Płyty deptakowe 2"></div>
+                    <div class="image-wrapper"><img src="plyty3.jpg" alt="Płyty deptakowe 3"></div>
+                </div>
+                <p>Nieregularne płyty z kamienia naturalnego.<br>Piękne płyty ogrodowe GRECKIE.<br>Jest to naturalny kamień pochodzący z GRECJI!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal dla zdjęć produktów -->
+    <div class="modal" id="productModal">
+        <span class="close-btn">×</span>
+        <img class="modal-image" id="modalProductImage" src="">
+        <button class="modal-btn modal-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="modal-btn modal-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Stopka -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Kamienie Naturalne</h3>
+                <p>Twoje piękno w naturze</p>
+                <a href="https://www.facebook.com/people/Kamie%C5%84-do-domu-i-ogrodu/100063550502123/#" target="_blank" class="facebook-btn"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            <div class="footer-contact">
+                <h4>Kontakt</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Ujrzanów 257B, 08-110 Siedlce</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:500341568">500-341-568</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:patrycja.karas1@wp.pl">patrycja.karas1@wp.pl</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Wszystkie prawa zastrzeżone</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+    <script src="kamienie.js"></script>
+</body>
+</html>
